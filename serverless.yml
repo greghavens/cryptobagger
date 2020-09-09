@@ -14,8 +14,8 @@ plugins:
   - serverless-python-requirements
  
 custom:
-  pythinRequirements:
-    dockerizePip: tue
+  pythonRequirements:
+    dockerizePip: non-linux
 
 service: cyrptobagger
 # app and org for use with dashboard.serverless.com
@@ -65,7 +65,7 @@ provider:
 
 functions:
   syncBots:
-    handler: handler.syncBots
+    handler: handler.sync
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

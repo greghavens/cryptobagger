@@ -2,13 +2,13 @@ import json
 import syncBots
 
 
-def syncBots(event, context):
+def sync(event, context):
 
     output = syncBots.run()
-    
+
     body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "input": event + output
+        "message": output,
+        "input": event
     }
 
     response = {
@@ -29,4 +29,4 @@ def syncBots(event, context):
 
 
 if __name__ == "__main__":
-    syncBots('', '')
+    sync('', '')
